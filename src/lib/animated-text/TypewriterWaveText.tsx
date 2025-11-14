@@ -21,10 +21,11 @@ export const TypewriterWaveText = ({
 
   return (
     <>
-      <span>
+      <span suppressHydrationWarning={true}>
         {letters.map((letter: string, index: number) => {
           const style = {
-            animationDelay: `${0.5 + index / 10}s`,
+            animationDelay: `${0.1 + index / 10}s`,
+            color: index % 2 === 0 ? firstColor : secondColor,
           } as CSSProperties;
 
           return (
@@ -40,20 +41,15 @@ export const TypewriterWaveText = ({
         }
 
         span span {
-          color: ${firstColor};
           position: relative;
           opacity: 0;
           animation: move-text 4s infinite;
         }
 
-        span span:nth-of-type(2n) {
-          color: ${secondColor};
-        }
-
         @keyframes move-text {
           0% {
             bottom: -0.1em;
-            opacity: 1;
+            opacity: 0;
           }
 
           15% {
