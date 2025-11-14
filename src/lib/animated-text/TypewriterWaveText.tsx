@@ -1,6 +1,6 @@
 "use client";
 
-import { CSSProperties, PropsWithChildren, useEffect, useState } from "react";
+import { CSSProperties, PropsWithChildren } from "react";
 import getChildrenLetters from "./getChildrenLetters";
 
 export type TypewriterWaveTextProps = {
@@ -15,32 +15,24 @@ export const TypewriterWaveText = ({
 }: PropsWithChildren<TypewriterWaveTextProps>) => {
   const letters = getChildrenLetters(children);
 
-  const [mounted, setMounted] = useState(false);
-
   if (!letters) {
     return null;
   }
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
   return (
     <>
-      <span suppressHydrationWarning>
-        {mounted
-          ? letters.map((letter: string, index: number) => {
-              const style = {
-                animationDelay: `${0.5 + index / 10}s`,
-              } as CSSProperties;
+      <span>
+        {letters.map((letter: string, index: number) => {
+          const style = {
+            animationDelay: `${0.5 + index / 10}s`,
+          } as CSSProperties;
 
-              return (
-                <span aria-hidden="true" key={index} style={style}>
-                  {letter}
-                </span>
-              );
-            })
-          : children}
+          return (
+            <span aria-hidden="true" key={index} style={style} suppressHydrationWarning={true}>
+              {letter}
+            </span>
+          );
+        })}
       </span>
       <style jsx>{`
         span {

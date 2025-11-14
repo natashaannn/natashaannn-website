@@ -1,24 +1,20 @@
 .page {
-  --button-primary-hover: var(--dark-green)
-  --button-secondary-hover: var(--light-brown);
-  --button-secondary-border: var(--light-brown);
-
   display: flex;
   min-height: 100vh;
   align-items: flex-start;
   justify-content: center;
-  background-color: var(--background);
+  background-color: var(--light-green);
 }
 
 .main {
   display: flex;
   width: 100%;
-  max-width: 800px;
+  max-width: 80%;
+  min-height: 100vh;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   background-color: var(--background);
-  padding: 120px 60px;
   text-align: center;
 }
 
@@ -65,6 +61,6 @@
 
 @media (max-width: 600px) {
   .main {
-    padding: 48px 24px;
+    padding: 10px 24px;
   }
 }

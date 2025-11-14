@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Patrick_Hand_SC } from "next/font/google";
 import "./globals.css";
+import { Header } from "@/lib/header/Header";
 
 const patrickHand = Patrick_Hand_SC({
   variable: "--font-patrick-hand-sc",
@@ -36,9 +37,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${patrickHand.variable}`}
-      >
+      <body className={`${patrickHand.variable}`}>
+        <Header />
         {children}
       </body>
     </html>
