@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import styles from "@/app/page.module.css";
+import styles from "./Header.module.css";
 import { TypewriterWaveText } from "@/lib/animated-text/TypewriterWaveText";
 import { NavLink } from "@/lib/nav/NavLink";
 
