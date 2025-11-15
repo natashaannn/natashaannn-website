@@ -12,7 +12,7 @@ export const IconBox = ({
 }: PropsWithChildren<IconBoxProps>) => {
   return (
     <>
-      <i className="icon">
+      <i className="icon" suppressHydrationWarning>
         {children}
       </i>
       <style jsx>{`

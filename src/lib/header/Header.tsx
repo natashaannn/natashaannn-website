@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import styles from "./Header.module.css";
 import { TypewriterWaveText } from "@/lib/animated-text/TypewriterWaveText";
 import { NavLink } from "@/lib/nav/NavLink";
@@ -10,12 +11,30 @@ export function Header() {
     <div className={styles.header}>
       <h1>
         <Link href="/">
-          <TypewriterWaveText
-            firstColor="var(--light-green)"
-            secondColor="var(--dark-brown)"
-          >
-            Natasha Ann
-          </TypewriterWaveText>
+          <span className={styles.titleRow}>
+            <Image
+              src="/favicon/favicon-32x32.png"
+              alt="Natasha Ann favicon"
+              width={28}
+              height={28}
+              className={styles.favicon}
+              sizes="28px"
+            />
+            <TypewriterWaveText
+              firstColor="var(--light-green)"
+              secondColor="var(--dark-brown)"
+            >
+              Natasha Ann
+            </TypewriterWaveText>
+            <Image
+              src="/favicon/favicon-32x32.png"
+              alt="Natasha Ann favicon"
+              width={28}
+              height={28}
+              className={styles.favicon}
+              sizes="28px"
+            />
+          </span>
         </Link>
       </h1>
       <nav>

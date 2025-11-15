@@ -34,7 +34,7 @@ type LinkSection = {
 
 const linkSections: LinkSection[] = [
   {
-    heading: "🧸Personal",
+    heading: "🐈‍⬛Personal",
     firstColor: colors.lightGreen,
     secondColor: colors.lightBrown,
     links: [
@@ -42,29 +42,29 @@ const linkSections: LinkSection[] = [
         href: "https://www.instagram.com/natashaannn/",
         src: "/links/instagram.svg",
         alt: "instagram logo",
-        color: colors.background,
-        label: "INSTAGRAM",
+        color: colors.lightBrown,
+        label: "INSTAGRAM (12k+)",
       },
       {
         href: "https://www.linkedin.com/in/natashaannn/",
         src: "/links/linkedin.svg.webp",
         alt: "linkedin logo",
         color: colors.background,
-        label: "LINKEDIN",
+        label: "LINKEDIN (2k+)",
       },
       {
         href: "https://www.tiktok.com/@natashaannn",
         src: "/links/tiktok.svg",
         alt: "tiktok logo",
-        color: colors.background,
-        label: "TIKTOK",
+        color: colors.lightBrown,
+        label: "TIKTOK (5k+)",
       },
     ],
   },
   {
     heading: "ragTech🎙️Tech podcast",
     firstColor: colors.lightBlue,
-    secondColor: colors.lightGreen,
+    secondColor: colors.lightBrown,
     links: [
       {
         href: "https://linktr.ee/ragtechdev",
@@ -77,7 +77,7 @@ const linkSections: LinkSection[] = [
 		href: "https://ragtechdev.com/techie-taboo",
 		src: "/links/ragtechlogo.webp",
 		alt: "ragTech logo",
-		color: colors.lightGreen,
+		color: colors.background,
 		label: "CARD GAME WAITLIST",
 	  },
 	  	  {
@@ -91,8 +91,8 @@ const linkSections: LinkSection[] = [
   },
   {
     heading: "Women devs sg👩🏻‍💻Tech community",
-    firstColor: colors.darkBrown,
-    secondColor: colors.lightBrown,
+    firstColor: colors.lightGreen,
+    secondColor: colors.lightBlue,
     links: [
       {
         href: "https://www.meetup.com/women-devs-sg/",
@@ -102,18 +102,18 @@ const linkSections: LinkSection[] = [
         label: "UPCOMING EVENTS",
       },
       {
-        href: "https://www.instagram.com/womendevssg/",
+        href: "https://linktr.ee/womendevssg",
         src: "/links/womendevs.png",
         alt: "women devs logo",
-        color: colors.lightBlue,
-        label: "INSTAGRAM",
+        color: colors.background,
+        label: "STAY UPDATED",
       },
       {
-        href: "https://www.linkedin.com/company/women-devs-sg/mycompany/",
+        href: "https://github.com/orgs/Women-Devs-SG/repositories",
         src: "/links/womendevs.png",
         alt: "women devs logo",
         color: colors.lightBlue,
-        label: "LINKEDIN",
+        label: "CONTRIBUTE CODE",
       },
     ],
   },
@@ -134,7 +134,7 @@ export default function LinksPage() {
           }}
         >
           {linkSections.map((section, sectionIndex) => (
-            <div key={sectionIndex}>
+            <div key={sectionIndex} suppressHydrationWarning>
               <TypewriterWaveText
                 firstColor={section.firstColor}
                 secondColor={section.secondColor}
@@ -142,7 +142,7 @@ export default function LinksPage() {
                 {section.heading}
               </TypewriterWaveText>
               {section.links.map((link, linkIndex) => (
-                <div key={linkIndex}>
+                <div key={linkIndex} suppressHydrationWarning>
                   <Link href={link.href}>
                     <GameButton
                       color={link.color}
@@ -150,7 +150,7 @@ export default function LinksPage() {
                       className="game-button"
                     >
                       <IconBox>
-                        <Image src={link.src} alt={link.alt} fill />
+                        <Image src={link.src} alt={link.alt} width={25} height={25} />
                       </IconBox>
                       {link.label}
                     </GameButton>
