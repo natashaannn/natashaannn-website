@@ -1,0 +1,31 @@
+    .scrapbook-background {
+      background-image: url('/scrapbook/scrapbook-rotated.svg');
+      background-repeat: no-repeat;
+      background-size: 100%;
+      text-align: center;
+    } 
+
+    .scrapbook-background > :global(.scrapbook__aspect-ratio) {
+      aspect-ratio: 6 / 10;
+
+      :global(.scrapbook-page__container) {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        height: 90%;
+        margin: 2%;
+      }
+    }
+
+    @media screen and (orientation: landscape) {
+        .scrapbook-background {
+          background-image: url('/scrapbook/scrapbook.svg');
+        }
+
+        .scrapbook-background > :global(.scrapbook__aspect-ratio) {
+        aspect-ratio: 10 / 6;
+        :global(.scrapbook-page__container) {
+          height: 90%;
+      }
+      }
+    }

@@ -23,7 +23,7 @@
   align-items: flex-end;
   justify-content: center;
   gap: 16px;
-  margin-top: 30px;
+  margin-top: 5px;
 }
 
 .heroCharacter {
@@ -55,11 +55,11 @@
 
 @media (max-width: 600px) {
   .main {
-    padding: 5px 24px;
+    padding: 0px 24px;
   }
 
   .heroRow {
-    gap: 8px;
+    gap: 5px;
   }
 
   .heroCharacter {
