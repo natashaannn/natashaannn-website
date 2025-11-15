@@ -34,8 +34,8 @@ export const MicroMeow = ({
   const faceFillId = `${uid}-faceFill`;
   const eyeId = `${uid}-eye`;
   const mPatternId = `${uid}-mPattern`;
-  const svgWidth = width ?? 64;
-  const svgHeight = height ?? 52;
+  const svgWidth = width ?? 128;
+  const svgHeight = height ?? 104;
   return (
     <>
       <svg

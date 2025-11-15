@@ -18,6 +18,30 @@
   text-align: center;
 }
 
+.heroRow {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.heroCharacter {
+  transform-origin: center bottom;
+}
+
+.heroCharacter svg {
+  width: 8vw;
+  max-width: 96px;
+  height: auto;
+}
+
+.heroAvatar {
+  display: block;
+  max-width: 30vw;
+  height: auto;
+}
+
 .h1 {
   letter-spacing: 0.5em;
   margin: 10px 0 0px 0;
@@ -26,5 +50,22 @@
 @media (max-width: 600px) {
   .main {
     padding: 5px 24px;
+  }
+
+  .heroRow {
+    gap: 8px;
+  }
+
+  .heroCharacter {
+    transform: none;
+  }
+
+  .heroCharacter svg {
+    width: 16vw;
+    max-width: 72px;
+  }
+
+  .heroAvatar {
+    max-width: 40vw;
   }
 }
