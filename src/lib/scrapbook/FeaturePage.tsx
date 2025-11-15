@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { GameButton } from "@/lib/button/GameButton";
 import { DetailedHTMLProps, HTMLAttributes } from "react";
+import styles from "./FeaturePage.module.css";
 
 function reformatDate(fullDate: string) {
   const date = new Date(fullDate);
@@ -36,18 +37,19 @@ export const Feature = ({
 }: FeatureProps) => {
   return (
     <>
-      <section className={`feature__container ${className ?? ""}`} {...rest}>
+      <section className={`${styles.featureContainer} ${className ?? ""}`} {...rest}>
         <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between" }}>
           <h1 style={{ alignSelf: "flex-start", textAlign: "left" }}>{title}</h1>
           <p style={{ alignSelf: "flex-end", textAlign: "right" }}>{reformatDate(date)}</p>
         </div>
 
-        <div className='feature__content-container'>
-          <div className={"feature__image-container"}>
+        <div className={styles.featureContent}>
+          <div className={styles.featureImageContainer}>
             <Image
               src={heroImage}
               alt={heroImage}
               fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               style={{
                 objectFit: 'contain',
               }}
@@ -62,35 +64,7 @@ export const Feature = ({
           </div>
         </div>
       </section>
-      <style jsx>{`
-        .feature__container {
-          padding: 0% 8% 0% 8%;
-        }
 
-        .feature__content-container {
-          display: flex;
-          flex-direction: row;
-          height: 100%;
-          overflow: scroll;
-        }
-
-        .feature__image-container {
-          position: relative;
-        }
-
-        @media (min-width: 500px) {
-          .feature__container {
-            padding: 10% 8% 0% 10%;
-          }
-          .feature__content-container {
-            flex-direction: column;
-          }
-          .feature__image-container {
-            width: 100%;
-            height: 50%;
-          }
-        }
-      `}</style>
     </>
   );
 };

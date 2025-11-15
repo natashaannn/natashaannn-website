@@ -2,6 +2,7 @@
 
 import { CSSProperties, PropsWithChildren } from "react";
 import getChildrenLetters from "./getChildrenLetters";
+import styles from "./TypewriterWaveText.module.css";
 
 export type TypewriterWaveTextProps = {
   firstColor: string;

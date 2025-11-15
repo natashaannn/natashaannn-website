@@ -1,0 +1,16 @@
+.gridContainer {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+    margin-left: center;
+    margin-right: center;
+}
+
+@media screen and (orientation: landscape) {
+.gridContainer {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+}  

@@ -1,0 +1,30 @@
+span {
+    font-size: xx-large;
+}
+
+span span {
+    position: relative;
+    opacity: 0;
+    animation: move-text 4s infinite;
+}
+
+@keyframes move-text {
+    0% {
+    bottom: -0.1em;
+    opacity: 0;
+    }
+
+    15% {
+    bottom: 0em;
+    }
+
+    35% {
+    bottom: 0.2em;
+    }
+
+    50%,
+    100% {
+    bottom: 0;
+    opacity: 1;
+    }
+}
