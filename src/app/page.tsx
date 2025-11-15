@@ -1,7 +1,10 @@
+"use client";
+
 import Link from "next/link";
 import { PipIdle } from "@/lib/characters/Pip";
 import { PoIdle } from "@/lib/characters/Po";
 import styles from "./page.module.css";
+import { LandingPrompt } from "@/lib/dialog/LandingPrompt";
 
 export default function Home() {
   return (
@@ -23,6 +26,9 @@ export default function Home() {
               <PoIdle />
             </div>
           </Link>
+        </div>
+        <div className={styles.landingPromptWrapper}>
+          <LandingPrompt />
         </div>
       </main>
     </div>
