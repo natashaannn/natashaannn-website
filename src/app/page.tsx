@@ -5,6 +5,7 @@ import { PipIdle } from "@/lib/characters/Pip";
 import { PoIdle } from "@/lib/characters/Po";
 import styles from "./page.module.css";
 import { LandingPrompt } from "@/lib/dialog/LandingPrompt";
+import { InlineButton } from "@/lib/button/InlineButton";
 
 export default function Home() {
   return (
@@ -29,6 +30,16 @@ export default function Home() {
         </div>
         <div className={styles.landingPromptWrapper}>
           <LandingPrompt />
+        </div>
+        <div>
+          <p>Read my &nbsp;
+            <InlineButton 
+            href="/scrapbook" 
+            primaryColor="var(--light-green)"
+            secondaryColor="var(--dark-green)">
+            📒 Scrapbook
+            </InlineButton> &nbsp;
+            to see what I do!</p>
         </div>
       </main>
     </div>
