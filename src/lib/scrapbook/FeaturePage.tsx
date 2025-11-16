@@ -4,15 +4,8 @@ import { GameButton } from "@/lib/button/GameButton";
 import { DetailedHTMLProps, HTMLAttributes } from "react";
 import styles from "./FeaturePage.module.css";
 
-function reformatDate(fullDate: string) {
-  const date = new Date(fullDate);
-  return date.toDateString().slice(4);
-}
-
 export type Post = {
-  slug: string;
   title: string;
-  date: string;
   heroImage: string;
   link: string;
   readMoreText?: string;
@@ -25,9 +18,7 @@ type FeatureProps = Post &
   };
 
 export const Feature = ({
-  slug,
   title,
-  date,
   heroImage,
   link,
   summary,
@@ -39,8 +30,7 @@ export const Feature = ({
     <>
       <section className={`${styles.featureContainer} ${className ?? ""}`} {...rest}>
         <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between" }}>
-          <h1 style={{ alignSelf: "flex-start", textAlign: "left" }}>{title}</h1>
-          <p style={{ alignSelf: "flex-end", textAlign: "right" }}>{reformatDate(date)}</p>
+          <h1 className={styles.title}>{title}</h1>
         </div>
 
         <div className={styles.featureContent}>
@@ -57,8 +47,8 @@ export const Feature = ({
           </div>
 
           <div>
-            <p>{summary}</p>
-            <Link href={link ?? { pathname: `/scrapbook/${slug}` }}>
+            <p style={{ margin: "0px" }}>{summary}</p>
+            <Link href={link}>
               <GameButton color="var(--light-green)">{readMoreText}</GameButton>
             </Link>
           </div>

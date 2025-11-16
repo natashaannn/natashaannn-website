@@ -1,11 +1,11 @@
 .gridContainer {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr;
-    align-items: center;
-    justify-content: center;
-    margin-left: center;
-    margin-right: center;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr;
+  align-items: stretch;     
+  justify-items: stretch;    
+  width: 100%;                 
+  margin: 0 auto;    
 }
 
 @media screen and (orientation: landscape) {

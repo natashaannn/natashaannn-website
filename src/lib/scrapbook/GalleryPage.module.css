@@ -1,6 +1,6 @@
 .galleryList {
   list-style-type: none;
-  margin: 0;
+  margin-top: 30px;
   padding-left: 0;
   display: flex;
   justify-content: center;
@@ -10,7 +10,6 @@
 }
 
 .galleryItem {
-  transition: 0.3s;
   width: 12em;
   height: 12em;
 }
@@ -32,6 +31,7 @@
   width: 100%;
   height: 100%;
   display: flex;
+  flex-direction: column;
 }
 
 .galleryImageCircled {
@@ -44,5 +44,14 @@
   .galleryItem {
     width: 6em;
     height: 6em;
+  }
+}
+
+@media screen and (min-width: 798px) {
+  .galleryItem {
+    width: 14vw;       
+    height: 14vw;  
+    max-width: 210px;  /* avoid getting too large on wide screens */
+    max-height: 210px;
   }
 }

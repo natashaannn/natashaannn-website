@@ -15,11 +15,10 @@ export const Gallery = ({ header, allPosts, onPostClick, className, ...rest }: G
   return (
     <>
       <section className={`${styles.gallery} ${className ?? ""}`} {...rest}>
-        <h1>{header}</h1>
         <ul className={styles.galleryList}>
           {allPosts?.map((post, i) => (
             <li
-              key={post.slug}
+              key={post.title}
               className={styles.galleryItem}
               onMouseOver={() => onPostClick(i)}
               onMouseLeave={() => onPostClick(i)}
@@ -42,6 +41,7 @@ export const Gallery = ({ header, allPosts, onPostClick, className, ...rest }: G
                     style={{ objectFit: "cover" }}
                   />
                 </div>
+                <p style={{ marginTop: "1px" }}>{post.title}</p>
               </div>
             </li>
           ))}
