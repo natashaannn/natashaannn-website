@@ -73,6 +73,13 @@ const linkSections: LinkSection[] = [
         color: colors.lightBrown,
         label: "AIRBNB",
       },
+      {
+        href: "https://github.com/natashaannn",
+        src: "/links/github.png",
+        alt: "github logo",
+        color: colors.background,
+        label: "GITHUB",
+      }
     ],
   },
   {
