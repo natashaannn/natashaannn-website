@@ -51,7 +51,7 @@ export function Header() {
             activeColor="var(--dark-brown)"
             hoverColor="var(--light-brown)"
           >
-            🪴 Links
+            🌱 Links
           </NavLink>
           <NavLink
             href="/contact"
