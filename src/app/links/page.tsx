@@ -43,21 +43,21 @@ const linkSections: LinkSection[] = [
         src: "/links/instagram.svg",
         alt: "instagram logo",
         color: colors.lightBrown,
-        label: "INSTAGRAM (18k+)",
+        label: "INSTAGRAM (30K+)",
       },
       {
         href: "https://www.linkedin.com/in/natashaannn/",
         src: "/links/linkedin.svg.webp",
         alt: "linkedin logo",
         color: colors.background,
-        label: "LINKEDIN (2k+)",
+        label: "LINKEDIN (3K+)",
       },
       {
         href: "https://www.tiktok.com/@natashaannn",
         src: "/links/tiktok.svg",
         alt: "tiktok logo",
         color: colors.lightBrown,
-        label: "TIKTOK (17k+)",
+        label: "TIKTOK (11K+)",
       },
       {
         href: "https://www.youtube.com/@natashaannn",
@@ -65,13 +65,6 @@ const linkSections: LinkSection[] = [
         alt: "youtube logo",
         color: colors.background,
         label: "YOUTUBE (NEW!)",
-      },
-      {
-        href: "https://www.airbnb.com.sg/rooms/1543938397049504025?guests=1&adults=1&s=67&unique_share_id=e2e7773e-c45b-45a6-9e0a-da74874e0610&source_impression_id=p3_1772441580_P3rxCtl44dQ1qQXg",
-        src: "/links/airbnb.png",
-        alt: "airbnb logo",
-        color: colors.lightBrown,
-        label: "AIRBNB",
       },
       {
         href: "https://github.com/natashaannn",
