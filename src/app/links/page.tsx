@@ -38,6 +38,35 @@ const linkSections: LinkSection[] = [
     firstColor: colors.lightGreen,
     secondColor: colors.lightBrown,
     links: [
+		{
+	    heading: "ragTech🎙️Tech podcast",
+	    firstColor: colors.lightBlue,
+	    secondColor: colors.lightBrown,
+	    links: [
+			{
+			href: "https://ragtechdev.com/willage",
+			src: "/links/ragtechlogo.webp",
+			alt: "ragTech logo",
+			color: colors.lightGreen,
+			label: "WILLAGE APP WAITLIST",
+		  },
+	      {
+	        href: "https://linktr.ee/ragtechdev",
+	        src: "/links/ragtechlogo.webp",
+	        alt: "ragTech logo",
+	        color: colors.lightGreen,
+	        label: "BIWEEKLY EPISODES",
+	      },
+		  {
+			href: "https://ragtechdev.com/techie-taboo",
+			src: "/links/ragtechlogo.webp",
+			alt: "ragTech logo",
+			color: colors.background,
+			label: "CARD GAME WAITLIST",
+		  },
+	    ],
+	  },
+		
       {
         href: "https://www.instagram.com/natashaannn/",
         src: "/links/instagram.svg",
@@ -75,34 +104,7 @@ const linkSections: LinkSection[] = [
       }
     ],
   },
-  {
-    heading: "ragTech🎙️Tech podcast",
-    firstColor: colors.lightBlue,
-    secondColor: colors.lightBrown,
-    links: [
-      {
-        href: "https://linktr.ee/ragtechdev",
-        src: "/links/ragtechlogo.webp",
-        alt: "ragTech logo",
-        color: colors.lightGreen,
-        label: "BIWEEKLY EPISODES",
-      },
-	  {
-		href: "https://ragtechdev.com/techie-taboo",
-		src: "/links/ragtechlogo.webp",
-		alt: "ragTech logo",
-		color: colors.background,
-		label: "CARD GAME WAITLIST",
-	  },
-	  	  {
-		href: "https://ragtechdev.com/blog",
-		src: "/links/ragtechlogo.webp",
-		alt: "ragTech logo",
-		color: colors.lightGreen,
-		label: "READ OUR BLOG",
-	  }
-    ],
-  },
+
   {
     heading: "Women devs sg👩🏻‍💻Tech community",
     firstColor: colors.lightGreen,
