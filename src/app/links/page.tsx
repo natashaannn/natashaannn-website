@@ -33,12 +33,7 @@ type LinkSection = {
 };
 
 const linkSections: LinkSection[] = [
-  {
-    heading: "🐈‍⬛Personal",
-    firstColor: colors.lightGreen,
-    secondColor: colors.lightBrown,
-    links: [
-		{
+	{
 	    heading: "ragTech🎙️Tech podcast",
 	    firstColor: colors.lightBlue,
 	    secondColor: colors.lightBrown,
@@ -66,13 +61,17 @@ const linkSections: LinkSection[] = [
 		  },
 	    ],
 	  },
-		
+  {
+    heading: "🐈‍⬛Personal",
+    firstColor: colors.lightGreen,
+    secondColor: colors.lightBrown,
+    links: [
       {
         href: "https://www.instagram.com/natashaannn/",
         src: "/links/instagram.svg",
         alt: "instagram logo",
         color: colors.lightBrown,
-        label: "INSTAGRAM (30K+)",
+        label: "INSTAGRAM (40K+)",
       },
       {
         href: "https://www.linkedin.com/in/natashaannn/",
