@@ -103,35 +103,6 @@ const linkSections: LinkSection[] = [
       }
     ],
   },
-
-  {
-    heading: "Women devs sg👩🏻‍💻Tech community",
-    firstColor: colors.lightGreen,
-    secondColor: colors.lightBlue,
-    links: [
-      {
-        href: "https://www.meetup.com/women-devs-sg/",
-        src: "/links/womendevs.png",
-        alt: "women devs sg logo",
-        color: colors.lightBlue,
-        label: "UPCOMING EVENTS",
-      },
-      {
-        href: "https://linktr.ee/womendevssg",
-        src: "/links/womendevs.png",
-        alt: "women devs logo",
-        color: colors.background,
-        label: "STAY UPDATED",
-      },
-      {
-        href: "https://github.com/orgs/Women-Devs-SG/repositories",
-        src: "/links/womendevs.png",
-        alt: "women devs logo",
-        color: colors.lightBlue,
-        label: "CONTRIBUTE CODE",
-      },
-    ],
-  },
 ];
 
 export default function LinksPage() {
